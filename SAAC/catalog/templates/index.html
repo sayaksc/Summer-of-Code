@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Student List</h1>
+
+    <ul>
+
+      {% for student in Students %}
+      <li>
+        {{ student.id }}
+        <a href="{{ student.get_absolute_url }}">{{ student.name }}</a>
+      </li>
+      {% endfor %}
+
+    </ul>
+{% endblock %}
